@@ -56,6 +56,8 @@ This problem can be represented using the graph theory.
 ![](img/Graph.svg)
 *A graph representation of regions*
 
+An edge from node A to node B means "Heating up node A heats up node B a little, too"
+
 # What's next
 - [ ] nicen up the formatting of this readme
     - [ ] maybe show an example of heating (from 0h to 3h)
