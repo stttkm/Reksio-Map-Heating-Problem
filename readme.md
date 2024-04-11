@@ -61,6 +61,9 @@ An edge from node A to node B means "Heating up node A heats up node B a little,
 # What's next
 - [ ] nicen up the formatting of this readme
     - [ ] maybe show an example of heating (from 0h to 3h)
+- [ ] write about solution space search
+  - [ ] moves
+  - [ ] limitations of considered solutions
 - [ ] represent the graph as an adjacency matrix
 - [ ] implement the brute force method to find the results
 - [ ] present the results in readme
