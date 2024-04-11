@@ -2,7 +2,7 @@
 ![](https://przygody-reksia-remastered.odoo.com/web/image/243-30ecc234/Zrzut%20ekranu%202023-10-29%20111041.png)
 *[A screenshot taken from "Reksio i Skarb Piratów Remastered Edition"](https://www.przygody-reksia.pl/galeria-zdjec)*
 
-[Reksio](https://en.wikipedia.org/wiki/Reksio) is one of the most popular cartoon character in polish animation industry.   [*Przygody Reksia (Rex Adventures)*](https://reksio.fandom.com/wiki/Przygody_Reksia) is a series of video games based on the animated character. The series is notorious for its relative diffculty, considering its target audience suggested in the game cover (six-year-olds and older children).
+[Reksio](https://en.wikipedia.org/wiki/Reksio) is one of the most popular cartoon character in polish animation industry.   [*Przygody Reksia (Rex Adventures)*](https://reksio.fandom.com/wiki/Przygody_Reksia) is a series of video games based on the animated character. The series is notorious for its relative diffculty, considering its target audience suggested by the game cover (six-year-olds and older children).
 
 One of the puzzles in the first game about Reksio ([Reksio i Skarb Piratów](https://reksio.fandom.com/wiki/Reksio_i_Skarb_Piratów)) struck me as a problem I'd encounter in an AI or algorithm course at a university.
 
@@ -27,8 +27,8 @@ Here I'll resume what I deduced about the game:
     3. 1h
     4. 1.5h
     5. 2h (a region is perfectly visibile)
-    6. 2.5h (a region legible, but it's at brink of being burnt out; still acceptable)
-    7. 3h (a region is is burnt out)
+    6. 2.5h (a region is legible, but it's at brink of being burnt out; still acceptable)
+    7. 3h (a region is burnt out)
 - clicking a region heats up the region being clicked upon by **1h** and its bordering regions by **0.5h**
 
 
@@ -36,12 +36,12 @@ Here I'll resume what I deduced about the game:
 ![](img/Paper%20Regions.png)
 *The map of paper regions and bordering*
 
-In the map I introduce numbering of regions in a clockwise fashion and from outer regions to the inner ones.
+In the map I introduce numbering of regions in a clockwise fashion and going from outer regions to the inner ones.
 
 ## The assymetric bordering phenomenon
-There's an interesting phenomenon that heating up the region #5 heats up the region #14, but heating up the region #14 doesn't heat up the region #5. This runs contrary to a sensible implementation of real life physics. 
+There's an interesting phenomenon. Heating up the region #5 heats up the region #14, but heating up the region #14 doesn't heat up the region #5. This runs contrary to a sensible implementation of real life physics. 
 
-I marked the the assymetric bordering phenomenon on the map with arrows. An arrow with "Y" means "Yes, heating up this region heats up the neighbour" and an arrow with "N" means "No, heating up this region doesn't heat up the neighbour" 
+I marked the assymetric bordering phenomenon on the map with arrows. An arrow with "Y" means "Yes, heating up this region heats up the neighbour" and an arrow with "N" means "No, heating up this region doesn't heat up the neighbour" 
 
 # Coming to a model for this problem
 
