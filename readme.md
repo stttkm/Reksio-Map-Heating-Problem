@@ -179,7 +179,7 @@ I think this research project makes the quote above look like gaslighting. Poor 
 
 # Acknowledgments
 I want to thank 
-- Julia for a beating this game together (we couldn't find a solution to the map heating problem, but the proceedes normally after failing a few times)
+- Julia for beating this game together (we couldn't find a solution to the map heating problem, but the proceedes normally after failing a few times)
 - [DeriDreri](https://github.com/DeriDreri) for helping me a little with debuggin C++ (the program unexpectedly copied the graph to Brute Force class instead of passing it directly) and playing  *Reksio i Skarb Piratów Remaster* with me a little bit
 
 
