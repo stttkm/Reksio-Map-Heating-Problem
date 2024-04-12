@@ -171,7 +171,7 @@ Assuming that a player doesn't burn a hole by clicking 3 times a region, but con
 
 After a failed attempt the narrator in the game says:
 
-> 🇵🇱: Rozumiem, ale wiesz co? To chyba w cale nie jest takie trudne.
+> 🇵🇱: Rozumiem, ale wiesz co? To chyba wcale nie jest takie trudne.
 
 > 🏴󠁧󠁢󠁥󠁮󠁧󠁿: I understand, but you know what, I don't think it's that hard at all.
 
