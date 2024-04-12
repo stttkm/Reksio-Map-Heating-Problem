@@ -169,6 +169,12 @@ There are 10 acceptable solutions and 0 perfect solutions. If my program isn't f
 # Conclusion
 Assuming that a player doesn't burn a hole by clicking 3 times a region, but continues to click after burning a hole by other means, then the probability of accedentily stumbling upon one of solutions to this puzzle is equal $\frac{10}{3^{16}}=\frac{10}{43 046 721}\approx0,000000232305731$. In other words: 1 in 4 304 672.
 
+# Acknowledgments
+I want to thank 
+- Julia for a beating this game together (we couldn't find a solution to the map heating problem, but the proceedes normally after failing a few times)
+- [DeriDreri](https://github.com/DeriDreri) for helping me a little with debuggin C++ (the program unexpectedly copied the graph to Brute Force class instead of passing it directly) and playing  *Reksio i Skarb Piratów Remaster* with me a little bit
+
+
 # What's next
 - [ ] nicen up the formatting of this readme
     - [ ] maybe show an example of heating (from 0h to 3h)
@@ -179,4 +185,5 @@ Assuming that a player doesn't burn a hole by clicking 3 times a region, but con
 - [X] represent the graph in a computer-friendly way
 - [X] implement the brute force method to find the results
 - [X] present the results in readme
-- [ ]  Analyze further the results
+- [ ] Analyze further the results
+- [ ] Consider the corresponding problem in the fan-made remastered edition of *Reksio i Skarb Piratów*
