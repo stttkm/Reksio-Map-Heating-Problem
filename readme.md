@@ -169,6 +169,14 @@ There are 10 acceptable solutions and 0 perfect solutions. If my program isn't f
 # Conclusion
 Assuming that a player doesn't burn a hole by clicking 3 times a region, but continues to click after burning a hole by other means, then the probability of accedentily stumbling upon one of solutions to this puzzle is equal $\frac{10}{3^{16}}=\frac{10}{43 046 721}\approx0,000000232305731$. In other words: 1 in 4 304 672.
 
+After a failed attempt the narrator in the game says:
+
+> 🇵🇱: Rozumiem, ale wiesz co? To chyba w cale nie jest takie trudne.
+
+> 🏴󠁧󠁢󠁥󠁮󠁧󠁿: I understand, but you know what, I don't think it's that hard at all.
+
+I think this research project makes the quote above look like gaslighting. Poor children.
+
 # Acknowledgments
 I want to thank 
 - Julia for a beating this game together (we couldn't find a solution to the map heating problem, but the proceedes normally after failing a few times)
