@@ -15,7 +15,13 @@ public:
     void read(string file_path);
 
     void reset_heat();
+
     void display();
+
+    bool check_visibility();
+
+    bool check_perfection();
+
 
     vector<Node> nodes;
     int node_num;

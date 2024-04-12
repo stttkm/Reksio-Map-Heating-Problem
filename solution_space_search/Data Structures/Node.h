@@ -15,14 +15,13 @@ public:
     void heat();
     void heat_a_little();
     void reset_heat(); // heat_status=0
-    bool is_perfect(); //2h -> heat_status=4
+    bool is_visible(); //2h -> heat_status=4 or 2.5h -> heat_status=5
     bool is_almost_burnt_out(); //2.5h -> heat_status=5
-    bool is_burnt_out(); //3h -> heat_status=6
     vector<Node *> neighbors;
     int id;
 
 private:
-    int heat_status = 0; //let's multiply by 2 the heat unit introduced in readme to use int instead of float
+    int heat_status = 0; //let's multiply by 2 the heat unit introduced in readme in order to use int instead of float
 
 };
 
