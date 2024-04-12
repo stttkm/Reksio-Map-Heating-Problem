@@ -69,7 +69,7 @@ A player can influence the game only by clicking regions. The order of clicking 
 
 Therefore a node should be thought of as having 3 states (not clicked, clicked once, clicked twice) in further considerations of user input.
 
-The user input can be represented with a vector of length equal to number of verteces in the graph. Each value in the vector should be 0, 1 or 2. The number of possible user input states that may produce an acceptable output is $3^{number of verteces}$.
+The user input can be represented with a vector of length equal to number of verteces in the graph. Each value in the vector should be 0, 1 or 2. The number of possible user input states that may produce an acceptable output is $3^{number \space of \space verteces}$.
 
 In the considered minigame there are 16 nodes. Thus user input ranges from (0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) to (2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2). There are $3^{16} = 43 046 721$. That's a number of candidate solutions modern computers are capable of going through with brute force, therefore further optimizations are not necessary to find out all the solutions. However, I've already come up with some optimizations, so I'll present them there.
 
@@ -81,7 +81,7 @@ Let's distingush between an acceptable solution and a perfect solution:
 [//]: # (Let's exclude the perfect solution from acceptable ones for the sake of simplicity in further discussion.)
 
 # Optimizing Brute Force by reducing the solution space
-Let's consider heat in the system. There is exactly $2.0 \times number_of_verteces$ heat in a perfect solution. There is at least $2.0 \times number_of_verteces$ heat in an acceptable solution and there is at most $2.5 \times number_of_verteces$ in them.
+Let's consider heat in the system. There is exactly $2.0 \times number \space of \space verteces$ heat in a perfect solution. There is at least $2.0 \times number \space of \space verteces$ heat in an acceptable solution and there is at most $2.5 \times number \space of \space verteces$ in them.
 
 For example, for the problem presented in *Reksio i Skarb Piratów*:
 - There is exactly $2.0 \times 16 = 32$ heat in a perfect solution. 
@@ -91,8 +91,8 @@ For example, for the problem presented in *Reksio i Skarb Piratów*:
 Let's bound the number of clicks possible. Minimum outdegree and maximum outdegree in the graph will play a crucial role.
 
 Clicking a node causes the heat to go up 
-- at least by $1 + min_outdegree * 0.5$
-- and at most by  $1 + max_outdegree * 0.5$
+- at least by $1 + min \space outdegree * 0.5$
+- and at most by  $1 + max \space outdegree * 0.5$
 in the system.
 
 The upper bound of number of clicks can be determined by the divison of maximum heat wanted by the minimum heat exerted by a click.
@@ -104,8 +104,8 @@ For example, for the problem presented in *Reksio i Skarb Piratów*:
   - the minimum outdegree is equal to 1 (the region #1)
   - the maximum outdegree is equal to 6 (the regions #11 and #12)
   - There is exactly $2.0 \times 16 = 32$ heat in a perfect solution.
-  - The minum amount of heat exerted by a click is $1 + min_outdegree * 0.5 = $1 + 1 * 0.5 = 1.5$
-  - The maximum amount of heat exerted by a click is $1 + max_outdegree * 0.5 = $1 + 6 * 0.5 = 4.0$
+  - The minum amount of heat exerted by a click is $1 + min \space outdegree * 0.5 = 1 + 1 * 0.5 = 1.5$
+  - The maximum amount of heat exerted by a click is $1 + max \space outdegree * 0.5 = 1 + 6 * 0.5 = 4.0$
   - The upper bound of number of clicks equals $32 / 1.5=21,33$
   - The lower bound of number of clicks equals $32 / 4.0=8$
 
@@ -113,8 +113,8 @@ For example, for the problem presented in *Reksio i Skarb Piratów*:
   - the minimum outdegree is equal to 1 (the region #1)
   - the maximum outdegree is equal to 6 (the regions #11 and #12)
   - There is at least $2.0 \times 16=32$ heat in an acceptable solution and there is at most $2.5 \times 16=40$ in them.
-  - The minum amount of heat exerted by a click is $1 + min_outdegree * 0.5 = $1 + 1 * 0.5 = 1.5$
-  - The maximum amount of heat exerted by a click is $1 + max_outdegree * 0.5 = $1 + 6 * 0.5 = 4.0$
+  - The minum amount of heat exerted by a click is $1 + min \space outdegree * 0.5 = 1 + 1 * 0.5 = 1.5$
+  - The maximum amount of heat exerted by a click is $1 + max \space outdegree * 0.5 = 1 + 6 * 0.5 = 4.0$
   - The upper bound of number of clicks equals $40 / 1.5=26,67$
   - The lower bound of number of clicks equals $32 / 4.0=8$
 
