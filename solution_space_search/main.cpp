@@ -10,8 +10,9 @@ using namespace std;
 int main(){
     Graph graph = Graph();
     graph.read("../test_graphs/Reksio_Graph.json");
+    graph.read("../test_graphs/Reksio_Graph_without_assymetry.json");
     graph.display();
 
-    Brute_force brute_force = Brute_force(graph);
+    Brute_force brute_force = Brute_force(&graph);
     brute_force.run();
 }

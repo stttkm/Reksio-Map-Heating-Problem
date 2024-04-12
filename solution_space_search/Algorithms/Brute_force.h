@@ -13,12 +13,12 @@ using namespace std;
 class Brute_force {
     vector<vector<int>> perfect_solutions = vector<vector<int>>();
     vector<vector<int>> acceptable_solutions = vector<vector<int>>(); // this excludes the perfect_solutions
-    Graph graph;
+    Graph* graph;
     vector<vector<int>> search_space = vector<vector<int>>();
 
 
 public:
-    Brute_force(const Graph &graph);
+    Brute_force( Graph *graph);
 
     void run();
 

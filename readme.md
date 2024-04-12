@@ -158,6 +158,16 @@ The space search is reduced to user input represented by vectors, whose sum of e
   - [ ] calculate the number of vectors
 
 # Code
+I've implemented the classic bruteforce method, since my computer goes theough the solution space in about 10 seconds.
+
+# Results
+![](img/solutions.svg)
+*Visualized solutions*
+
+There are 10 acceptable solutions and 0 perfect solutions. If my program isn't faulty, then achieving the ideal end state suggested by the game is impossible. There'll always be at least one region at brink of burning out.
+
+# Conclusion
+Assuming that a player doesn't burn a hole by clicking 3 times a region, but continues to click after burning a hole by other means, then the probability of accedentily stumbling upon one of solutions to this puzzle is equal $\frac{10}{3^{16}}=\frac{10}{43 046 721}\approx0,000000232305731=0,0000232305731\%$. In other words: 1 in 4 304 672.
 
 # What's next
 - [ ] nicen up the formatting of this readme
@@ -166,6 +176,7 @@ The space search is reduced to user input represented by vectors, whose sum of e
   - [X] moves
   - [X] limitations of considered solutions
 - [ ] consider the problem from the perspective where the state of the map is the solution space, not the user input
-- [ ] represent the graph as an adjacency matrix
-- [ ] implement the brute force method to find the results
-- [ ] present the results in readme
+- [X] represent the graph in a computer-friendly way
+- [X] implement the brute force method to find the results
+- [X] present the results in readme
+- [ ]  Analyze further the results

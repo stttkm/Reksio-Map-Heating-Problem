@@ -36,7 +36,7 @@ void Graph::read(string file_path) {
 
     nodes = vector<Node>(node_num);
 
-    // Populate nodes
+    // Add node details
     for (auto it = doc.MemberBegin(); it != doc.MemberEnd(); ++it) {
         string key = it->name.GetString();
         if (key != "numberOfVerteces") {
@@ -55,7 +55,7 @@ void Graph::read(string file_path) {
 }
 
 void Graph::reset_heat() {
-    for (Node node: nodes) {
+    for (Node &node: nodes) {
         node.reset_heat();
     }
 }

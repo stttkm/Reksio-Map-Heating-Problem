@@ -12,12 +12,12 @@
 
 using namespace std;
 
-Brute_force::Brute_force(const Graph &graph) {
+Brute_force::Brute_force(Graph *graph) {
     this->graph = graph;
 }
 
 void Brute_force::generateVectors(std::vector<int> &current, int index) {
-    if (index == graph.node_num) {
+    if (index == graph->node_num) {
         this->search_space.push_back(current);
         return;
     }
@@ -29,18 +29,17 @@ void Brute_force::generateVectors(std::vector<int> &current, int index) {
 
 
 void Brute_force::run() {
-    std::vector<int> current(graph.node_num, 0);
-//    generateVectors(current, 0);
-
-    search_space.push_back(std::vector<int>({2,1,1,0,0,2,0,2,0,0,1,0,2,0,1,1}));
+    std::vector<int> current(graph->node_num, 0);
+//    search_space.push_back(std::vector<int>({2,1,1,0,0,2,0,2,0,0,1,0,2,0,1,1})); //for testing purposes - a known acceptable solution taken from this vid https://youtu.be/uo181tSUpL8?si=TvexG6hbyxt7_oSo
+    generateVectors(current, 0);
 
     // let's iterate over all the possible user inputs
     for (const auto &user_input: this->search_space) {
-        // Printing the generated vectors
-        //        for (int val : user_input) {
-        //            std::cout << val << " ";
-        //        }
-        //        std::cout << std::endl;
+//         Printing the generated vectors
+//                for (int val : user_input) {
+//                    std::cout << val << " ";
+//                }
+//                std::cout << std::endl;
 
         // HEATING 🔥🔥🔥
         // iterate over the user input region by region
@@ -48,24 +47,24 @@ void Brute_force::run() {
             // let's heat it
             int click_num = user_input[region_index];
             for (int j = 0; j < click_num; j++)
-                graph.nodes[region_index].heat();
+                graph->nodes[region_index].heat();
         }
 
         // SOLUTION JUDGMENT ‍⚖️‍⚖️‍⚖️
         // let's filter out all unacceptable solutions
-        if (!graph.check_visibility()) {
-            graph.reset_heat();
+        if (!graph->check_visibility()) {
+            graph->reset_heat();
             continue;
         }
         // let's filter out all perfect solutions
-        if (graph.check_perfection()) {
+        if (graph->check_perfection()) {
             this->perfect_solutions.push_back(vector<int>(user_input));
-            graph.reset_heat();
+            graph->reset_heat();
             continue;
         }
         // let's treat acceptable, but not perfect solutions
         this->acceptable_solutions.push_back(vector<int>(user_input));
-        graph.reset_heat();
+        graph->reset_heat();
     }
     save_output();
 }
